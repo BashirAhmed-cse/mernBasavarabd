@@ -8,6 +8,7 @@ import {
 import { app } from "./../firebase";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button2 from "../components/Button2";
 
 export default function CreateListing() {
   const {currentUser} = useSelector(state => state.user)
@@ -147,10 +148,14 @@ export default function CreateListing() {
     }
   }
   return (
-    <main className="p-3 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">
+    <main className="p-3 max-w-4xl mx-auto my-10">
+
+     <div className=" flex mb-10 itms-center gap-5">
+     <h1 className="text-3xl font-semibold">
         Create a Listing
-      </h1>
+     </h1>
+     <Button2 url="/viewListing" text="View Listing"/>
+     </div>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col gap-4 flex-1">
           <input
@@ -267,7 +272,7 @@ export default function CreateListing() {
               />
               <div className="flex flex-col items-center">
                 <p>Regular Price</p>
-                <span className="text-xs">($ / Month)</span>
+                <span className="text-xs">(৳ / Month)</span>
               </div>
             </div>
 
@@ -283,7 +288,7 @@ export default function CreateListing() {
                />
                <div className="flex flex-col items-center">
                  <p>Discounted Price</p>
-                 <span className="text-xs">($ / Month)</span>
+                 <span className="text-xs">(৳ / Month)</span>
                </div>
              </div>
             )}
@@ -296,6 +301,10 @@ export default function CreateListing() {
             Images:
             <span className="font-normal text-gray-600 ml-2">
               The first image will be cover (max-6)
+            </span>
+            <br/>
+            <span className="font-normal text-green-600 ml-2">
+              Please Select Listing Image and Click Upload Button
             </span>
           </p>
           <div className="flex gap-4">
