@@ -51,8 +51,8 @@ console.log(saleListings);
   return (
     <div>
       {/* top */}
-      <div className='flex gap-4 border-b border-green-400'>
-        <div className='flex flex-col gap-6 p-20 py-15 px-3 max-w-6xl mx-auto'>
+      <div className='sm:h-screen flex gap-4 border-b border-green-400'>
+        <div className='flex flex-col gap-6 p-28 py-15 px-3 max-w-6xl mx-auto'>
             <h1 className='text-slate-700 font-bold text-4xl lg:text-6xl'>
             Find your <span className='text-slate-500'>favorite</span> 
               <br/>
