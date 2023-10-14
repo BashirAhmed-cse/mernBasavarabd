@@ -52,7 +52,7 @@ console.log(saleListings);
     <div>
       {/* top */}
       <div className='flex gap-4 border-b border-green-400'>
-        <div className='flex flex-col gap-6 p-15 py-8 px-3 max-w-6xl mx-auto'>
+        <div className='flex flex-col gap-6 p-20 py-15 px-3 max-w-6xl mx-auto'>
             <h1 className='text-slate-700 font-bold text-4xl lg:text-6xl'>
             Find your <span className='text-slate-500'>favorite</span> 
               <br/>
@@ -66,8 +66,8 @@ console.log(saleListings);
             <Button2 url="/search" text="Find Property"/>
             </div>
         </div>
-        <div className='flex p-15 px-3 max-w-6xl mx-auto hidden lg:mt-0 lg:col-span-5 lg:flex'>
-        <img  className="img h-[300px] w-auto"
+        <div className='p-15 px-3 max-w-6xl mx-auto hidden lg:mt-0 lg:col-span-5 lg:flex'>
+        <img  className="img h-[400px] w-auto"
                 src={Hero}
                 alt="বাসাভাড়াবিডি.কম" />
         </div>
