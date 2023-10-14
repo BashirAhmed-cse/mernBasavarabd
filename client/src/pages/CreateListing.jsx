@@ -138,7 +138,9 @@ export default function CreateListing() {
       if (data.success === false){
        setError(data.message); 
       }
-      navigate(`/listing/${data._id}`)
+      const listingName = data.name || 'Unnamed Listing';
+      navigate(`/listing/${data._id}/${encodeURIComponent(listingName)}`);
+
     } catch (error) {
       setError(error.message);
       setLoading(false);

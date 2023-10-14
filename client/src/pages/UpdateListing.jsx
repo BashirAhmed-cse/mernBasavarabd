@@ -37,7 +37,7 @@ export default function UpdateListing() {
   useEffect(() => {
     const fetchListing = async () => {
       const listingId = params.listingId;
-      const res = await fetch(`/api/listing/get/${listingId}`);
+      const res = await fetch(`/api/listing/get/${listingId}/${encodeURIComponent(params.listingName)}`);
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
@@ -153,7 +153,8 @@ export default function UpdateListing() {
       if (data.success === false){
        setError(data.message); 
       }
-      navigate(`/listing/${data._id}`)
+      const listingName = data.name || 'Unnamed Listing';
+      navigate(`/listing/${data._id}/${encodeURIComponent(listingName)}`);
     } catch (error) {
       setError(error.message);
       setLoading(false);
