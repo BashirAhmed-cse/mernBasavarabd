@@ -51,14 +51,14 @@ console.log(saleListings);
   return (
     <div>
       {/* top */}
-      <div className='sm:h-screen flex gap-4 border-b border-green-400'>
-        <div className='flex flex-col gap-6 p-28 py-15 px-3 max-w-6xl mx-auto'>
-            <h1 className='text-slate-700 font-bold text-4xl lg:text-6xl'>
+      <div className='grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 border-b border-green-400'>
+        <div className='mr-auto place-self-center lg:col-span-7'>
+            <h1 className='text-slate-700 max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl'>
             Find your <span className='text-slate-500'>favorite</span> 
               <br/>
               properties sale or rent
             </h1>
-            <div className='text-gray-400 text-sm sm:text-lg'>
+            <div className='max-w-2xl mb-6 font-light text-green-600 lg:mb-8 md:text-lg lg:text-xl'>
             বাসা ভাড়ার সহজ মাধ্যম - বাসাভাড়াবিডি.কম 
             </div>
             <div className='flex gap-4'>
@@ -66,7 +66,7 @@ console.log(saleListings);
             <Button2 url="/search" text="Find Property"/>
             </div>
         </div>
-        <div className='p-15 px-3 max-w-6xl mx-auto hidden lg:mt-0 lg:col-span-5 lg:flex'>
+        <div className='hidden lg:mt-0 lg:col-span-5 lg:flex'>
         <img  className="img h-[400px] w-auto"
                 src={Hero}
                 alt="বাসাভাড়াবিডি.কম" />
