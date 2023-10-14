@@ -62,7 +62,7 @@ console.log(saleListings);
             বাসা ভাড়ার সহজ মাধ্যম - বাসাভাড়াবিডি.কম 
             </div>
             <div className='flex gap-4'>
-            <Button url="/profile" text="Add Property"/>
+            <Button url="/create-listing" text="Add Property"/>
             <Button2 url="/search" text="Find Property"/>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Logo from '../assets/logo2.png';
+import Button from "./Button";
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
@@ -28,10 +29,10 @@ export default function Header() {
 
   return (
     <header className="bg-color shadow-md border-y-2 border-green-400">
-      <div className="flex justify-between items-center container mx-auto px-4 p-3">
+      <div className="flex justify-between items-center container mx-auto px-4 p-3 gap-2">
         <Link to="">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <img  className="h-9 w-auto"
+            <img  className="h-7 sm:h-10 w-auto"
                 src={Logo}
                 alt="বাসাভাড়াবিডি.কম" />
           </h1>
@@ -40,7 +41,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search..."
-            className="bg-transparent focus:outline-none w-24 sm:w-64"
+            className="bg-transparent focus:outline-none w-20 sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -50,7 +51,7 @@ export default function Header() {
           
         </form>
 
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-2 sm:gap-6 items-center">
           <Link to="/">
             <li className="hidden sm:inline link link-underline link-underline-black text-lg">
               Home
@@ -63,13 +64,16 @@ export default function Header() {
           </Link>
           <Link to="/profile">
             {currentUser ? (
+              <div className="flex gap-4">
+                <Button url="/create-listing" text="Add Property" className='hidden sm:inline'/>
               <img
                 className="rounded-full h-9 w-9 object-cover"
                 src={currentUser.avatar}
                 alt="profile"
               />
+              </div>
             ) : (
-              <li className="w-full rounded px-5 py-3 bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">Sign In</li>
+              <li className="w-full rounded px-3 py-2 bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">Sign In</li>
             )}
           </Link>
         </ul>
